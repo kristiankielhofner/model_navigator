@@ -168,10 +168,12 @@ class AnalysisConfigGenerator(BaseConfigGenerator):
             "perf_server_compute_output",
         ]
 
+	fix_model_repository_path = self.output_model_repository_path.as_posix() + "-broken"
+
         config = {
             "profile_models": model_names,
             "checkpoint_directory": self._analyzer_checkpoints_dir_path.as_posix(),
-            "output_model_repository_path": self.output_model_repository_path.as_posix(),
+            "output_model_repository_path": fix_model_repository_path,
             "export_path": self._analyzer_path.resolve().as_posix(),
             "filename_model_inference": self.results_path.name,
             "filename_model_gpu": self.metrics_path.name,
