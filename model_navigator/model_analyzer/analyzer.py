@@ -178,7 +178,7 @@ class AnalysisConfigGenerator(BaseConfigGenerator):
             "num_top_model_configs": self._analysis_config.top_n_configs,
             "objectives": self._analysis_config.objectives,
             "inference_output_fields": inference_output_fields,
-            "override_output_model_repository": True,
+            "override_output_model_repository": "true",
         }
 
         constraints = self._get_constraints()
