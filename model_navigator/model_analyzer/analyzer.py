@@ -168,7 +168,7 @@ class AnalysisConfigGenerator(BaseConfigGenerator):
             "perf_server_compute_output",
         ]
 
-	fix_model_repository_path = self.output_model_repository_path.as_posix() + "-broken"
+        fix_model_repository_path = self.output_model_repository_path.as_posix() + "-broken"
 
         config = {
             "profile_models": model_names,
