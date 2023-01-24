@@ -169,7 +169,7 @@ class AnalysisConfigGenerator(BaseConfigGenerator):
         ]
 
         config = {
-            "analysis_models": model_names,
+            "profile_models": model_names,
             "checkpoint_directory": self._analyzer_checkpoints_dir_path.as_posix(),
             "output_model_repository_path": self.output_model_repository_path.as_posix(),
             "export_path": self._analyzer_path.resolve().as_posix(),
